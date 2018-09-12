@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Contact Us</title>
+<style>
+html {
+  background: url("images/diary2.jpg"); no-repeat center center fixed;
+  background-size: cover;
+  background-attachment: fixed;
+}
+div{
+text-align:justify;
+}
+div img{
+display:inline-block;
+ }
+
+#image1{
+background-color:#333;
+margin-top:40px;
+margin-left:300px;
+padding-left:250px;
+padding-top:100px;
+opacity:.9;
+height:1700px;
+width:500px;
+border-radius:90px;
+}
+img{
+border-radius:150px;
+height:300px;
+width:300px;
+}
+#text{
+color:#E5E51F;
+font-size:18px;
+}
+h1{
+text-indent:3px;
+font-family:"Trebuchet MS",Helvetica,sans-serif;
+text-align:center;
+ letter-spacing: 2px;
+ color:#E5E51F;
+ opacity:.8;}
+h3{text-decoration:underline;}
+button{
+ background-color:grey;
+    color: #E5E51F;
+    border: none;
+    padding: 15px 32px 15px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 2px;
+   }
+   button:hover{box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1.5)}
+   input{
+      transform:scale(1,2);
+      height:50px;
+      width:300px;
+	  background-color:grey;
+    color: #E5E51F;
+	  }
+a{
+
+color: #E5E51F;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 38px 25px;
+  text-decoration:none;}
+li{
+padding:20px 15px;
+list-style-type:none;
+background-color:#333;
+width:20%;
+opacity:.8;
+
+
+}
+li:hover{
+background-color:grey;
+width:225px;
+height:40px;
+opacity:.8;
+}
+a:hover{
+color:#E5E51F;
+font-size:25px;
+}
+</style>
+<script>
+function myFunction()
+{
+document.getElementById("image1").style.height="1900px";
+var element = document.createElement("TEXTAREA");
+element.setAttribute("rows", "150");
+element.setAttribute("cols", "5");
+element.setAttribute("name", "Test Name");
+element.setAttribute("id","final");
+document.getElementById("image1").appendChild(element);
+var newelement=document.getElementById("final");
+newelement.style.backgroundColor="grey";
+newelement.style.color="#E5E51F";
+newelement.style.height="22px";
+newelement.style.position="absolute";
+newelement.style.border="2px solid #E5E51F";
+newelement.style.border="10px";
+newelement.style.width="230px";
+newelement.style.marginTop="80px";
+var newelementpost=document.createElement("BUTTON");
+newelementpost.setAttribute("name", "btn");
+newelementpost.setAttribute("value", "submit");
+newelementpost.setAttribute("type", "submit");
+newelementpost.setAttribute("id","finalbutton");
+var t=document.createTextNode("Submit");
+newelementpost.appendChild(t);
+newelementpost.addEventListener("click",post);
+newelementpost.style.backgroundColor="grey";
+newelementpost.style.color="#E5E51F";
+newelementpost.style.marginTop="120px";
+document.getElementById("image1").appendChild(newelementpost);
+}
+function post()
+{
+var next=document.createElement("div");
+next.setAttribute("id","next1");
+next.style.backgroundColor="grey";
+next.style.color="#E5E51F";
+next.style.height="60px";
+next.style.width="150px";
+next.textContent=document.getElementById("final").value;
+document.getElementById("image1").appendChild(next);
+var ele=document.getElementById("final");
+ele.parentNode.removeChild(ele);
+
+}
+
+</script>
+</head>
+
+<body>
+
+<h1>contact us</h1>
+<div id="image1">
+	<img src="images/shreya.jpg" alt="imgofshreya"><br><br><br>
+	<div id="text">Shreya V Shetty<br><br>Email-Id:<br><br><br><br><br><br></div>
+
+	<h3>We would love to hear from you!!!</h3>
+	Providing you with a better experience is what<br> we hope to deliver and your feedback is <br>extremely valuable to us
+	so please<br> leave a message here<br><br>
+	<button name="submit" value="submit" onclick="myFunction()" >Feedback</button>
+	</div>
+	</div>
+	<li><a href="html/userpage.html">User Page</a></li>
+
+</body>
+</html>
